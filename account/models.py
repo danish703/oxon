@@ -28,7 +28,11 @@ class AccountManager(BaseUserManager):
         user = self.create_user(
             email,
             password=password,
+<<<<<<< HEAD
             date_of_birth=None ,
+=======
+            date_of_birth=None,
+>>>>>>> origin
             country=None,
             image=None,
             address=address,
@@ -47,7 +51,7 @@ class Account(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
-    date_of_birth = models.DateField(blank=True,null=True)
+    date_of_birth = models.DateField(blank=True,null=True,)
     country = models.CharField(max_length=100,null=True,blank=True)
     image = models.ImageField(upload_to='user/',blank=True,null=True)
     address = models.CharField(max_length=100)
